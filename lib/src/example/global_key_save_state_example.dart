@@ -27,12 +27,14 @@ class _GlobalKeySaveStateExampleState extends State<GlobalKeySaveStateExample> {
       ),
       bottomNavigationBar: !_isHome
           ? HomeView(
+              // key: ValueKey(1)
               key: _homeKey,
             )
           : null,
       body: _isHome
           ? Center(
               child: HomeView(
+                // key: ValueKey(1)
                 key: _homeKey,
               ),
             )
