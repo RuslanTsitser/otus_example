@@ -9,6 +9,7 @@ class LocalKeyExample extends StatefulWidget {
 
 class _LocalKeyExampleState extends State<LocalKeyExample> {
   Color _color = Colors.red;
+  final int _count = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -18,11 +19,26 @@ class _LocalKeyExampleState extends State<LocalKeyExample> {
       ),
       body: AnimatedSwitcher(
         duration: const Duration(seconds: 1),
-        child: Container(
+        child:
+            //  _count == 0
+            //     ? SizedBox(
+            //         child: Text(
+            //           'Count: $_count',
+            //           style: const TextStyle(fontSize: 24),
+            //         ),
+            //       )
+            //     :
+            Container(
           // key: UniqueKey(),
-          key: ValueKey<Color>(_color),
+          key: ValueKey<int>(_count),
           // key: ObjectKey(_color),
           color: _color,
+          child: Center(
+            child: Text(
+              'Count: $_count',
+              style: const TextStyle(fontSize: 24),
+            ),
+          ),
         ),
       ),
       floatingActionButton: Column(
@@ -33,6 +49,7 @@ class _LocalKeyExampleState extends State<LocalKeyExample> {
               onPressed: () {
                 setState(() {
                   _color = Colors.blue;
+                  // _count = 1;
                 });
               },
               child: const Icon(
@@ -44,6 +61,7 @@ class _LocalKeyExampleState extends State<LocalKeyExample> {
             onPressed: () {
               setState(() {
                 _color = Colors.red;
+                // _count = 0;
               });
             },
             child: const Icon(

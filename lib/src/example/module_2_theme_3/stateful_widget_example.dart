@@ -16,14 +16,15 @@ class _StatefulWidgetExampleState extends State<StatefulWidgetExample> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('InheritedWidget Example'),
+        title: const Text('StatefulWidget Example'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Counter(
-              count: _count,
+            Text(
+              'Count: $_count',
+              style: const TextStyle(fontSize: 24),
             ),
             const SizedBox(height: 16),
             ElevatedButton(
