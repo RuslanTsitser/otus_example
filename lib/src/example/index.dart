@@ -8,3 +8,5 @@ export 'module_2_theme_3/simple_inherited_widget_example.dart';
 export 'module_2_theme_3/stateful_widget_example.dart';
 export 'module_2_theme_4/cupertino_scaffold_example.dart';
 export 'module_2_theme_4/material_scaffold_example.dart';
+export 'module_2_theme_4/multi_child_layout_example.dart';
+export 'module_2_theme_4/single_child_layout_example.dart';

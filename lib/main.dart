@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
                         ),
                       );
                     },
-                    child: const Text('Elevated Button'),
+                    child: const Text('Material Button'),
                   ),
                   OutlinedButton(
                     onPressed: () {
@@ -46,11 +46,22 @@ class MyApp extends StatelessWidget {
                         ),
                       );
                     },
-                    child: const Text('Outlined Button'),
+                    child: const Text('Cupertino Button'),
                   ),
                   FilledButton(
-                    onPressed: () {},
-                    child: const Text('Filled Button'),
+                    onPressed: () {
+                      // Navigator.of(context).push(
+                      //   MaterialPageRoute(
+                      //     builder: (context) => const CustomSingleChildLayoutExample(),
+                      //   ),
+                      // );
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => const CustomMultiChildLayoutExample(),
+                        ),
+                      );
+                    },
+                    child: const Text('Custom Layout Button'),
                   ),
                 ],
               ),
